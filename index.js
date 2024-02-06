@@ -34,7 +34,7 @@ inquirer
 
 .then((response) => {
     const content = generateSVG(response);
-    fs.writeFile(`${response.logo}.svg`, content, (err) => {
+    fs.writeFile(`./logos/${response.logo}.svg`, content, (err) => {
         if (err) throw err;
         console.log("Generated logo.svg")
     });
